@@ -16,4 +16,4 @@ jobs:
     environment: ${{ inputs.ambiente }}
     steps:
       - name: Fake de deploy em ambiente
-        run: echo "Deploy no ambiente de  ${{ vars.AMBIENTE_DEPLOY}}"
+        run: echo "Deploy no ambiente de ${{ vars.AMBIENTE_DEPLOY}}"

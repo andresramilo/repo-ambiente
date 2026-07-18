@@ -1,0 +1,25 @@
+name: CD ENVIRONMENTS
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-fake-homolog:
+    runs-on: ubuntu-latest
+    environment: homologacao
+    steps:
+      - name: Fake de deploy em ambiente de homologacao
+        run: echo "Deploy no ambiente de ${{ vars.AMBIENTE_DEPLOY}}"
+
+  teste-fake:
+    runs-on: ubuntu-latest
+    environment: homologacao
+    steps:
+      - name: Fake de teste em ambiente de homologacao
+        run: echo "Deploy no ambiente de ${{ vars.AMBIENTE_DEPLOY}}"
+
+  deploy-fake-prod:
+    runs-on: ubuntu-latest
+    environment: producao
+    steps:
+      - name: Fake de deploy em ambiente de producao
+        run: echo "Deploy no ambiente de ${{ vars.AMBIENTE_DEPLOY}}"
